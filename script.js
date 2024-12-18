@@ -43,7 +43,7 @@ function convertCurrency(amount, price, symbol){
   try{
 
     // interpolação de strings!
-    description.textContent = `${symbol}1 = ${price}`
+    description.textContent = `${symbol}1 = ${formatCurrencyBRL(price)}`
     // Está exibindo e aplica a class e exibe o footer
     footer.classList.add("show-result")
 
@@ -58,7 +58,7 @@ function convertCurrency(amount, price, symbol){
 }
 
 // FOrmata a moeda em real brasileiro
-function formCurrencyBRL(value){
+function formatCurrencyBRL(value){
   return Number(value).toLocaleString("pt-BR",{
     style: "currency",
     currency: "BRL",
